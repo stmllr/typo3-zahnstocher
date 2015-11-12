@@ -1,4 +1,3 @@
 # Zahnstocher
 
-Zahnstocher (en. toothpick) is a TYPO3 extension and
-helps you when piercing into programming code of TYPO3.
+Zahnstocher (en. toothpick) is a TYPO3 extension which helps you piercing into TYPO3 code.
