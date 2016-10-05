@@ -15,12 +15,13 @@ namespace Stmllr\Zahnstocher\Log\Processor;
  */
 
 use TYPO3\CMS\Core\Log\LogRecord;
+use TYPO3\CMS\Core\Log\Processor\AbstractProcessor;
 
 /**
  * Introspection processor to automatically add where the log record came from.
  * Backported from TYPO3 7.x to support backtraces
  */
-class IntrospectionProcessor extends \TYPO3\CMS\Core\Log\Processor\AbstractProcessor
+class IntrospectionProcessor extends AbstractProcessor
 {
 
     /**
@@ -56,7 +57,7 @@ class IntrospectionProcessor extends \TYPO3\CMS\Core\Log\Processor\AbstractProce
      * Set the number of levels to be shift from the backtrace
      *
      * @param int $shiftBackTraceLevel Numbers of levels to shift
-     * @return \Stmllr\Zahnstocher\Log\Processor\IntrospectionProcessor
+     * @return IntrospectionProcessor
      */
     public function setShiftBackTraceLevel($shiftBackTraceLevel)
     {
@@ -69,7 +70,7 @@ class IntrospectionProcessor extends \TYPO3\CMS\Core\Log\Processor\AbstractProce
      * Set if the full backtrace should be added to the log or just the last item
      *
      * @param boolean $appendFullBackTrace If the full backtrace should be added
-     * @return \Stmllr\Zahnstocher\Log\Processor\IntrospectionProcessor
+     * @return IntrospectionProcessor
      */
     public function setAppendFullBackTrace($appendFullBackTrace)
     {
