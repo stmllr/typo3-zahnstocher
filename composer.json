@@ -1,0 +1,34 @@
+{
+	"name": "stmllr/typo3-zahnstocher",
+	"type": "typo3-cms-extension",
+	"authors": [
+		{
+			"name": "Steffen Müller",
+			"homepage": "https://stmllr.net/"
+		}
+	],
+	"description": "Zahnstocher (en. toothpick) helps you when piercing into programming code.",
+	"homepage": "https://github.com/stmllr/typo3-zahnstocher",
+	"support": {
+		"issues": "https://github.com/stmllr/typo3-zahnstocher/issues"
+	},
+	"license": [
+		"GPL-2.0+"
+	],
+	"keywords": [
+		"TYPO3 CMS"
+	],
+	"require": {
+		"typo3/cms-core": ">=6.2.0,<7.6.99",
+		"php": ">=5.5.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Stmllr\\Zahnstocher\\": "Classes/"
+		}
+	},
+	"replace": {
+		"typo3-zahnstocher": "self.version",
+		"typo3-ter/zahnstocher": "self.version"
+	}
+}
