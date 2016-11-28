@@ -28,7 +28,7 @@
 		}
 	},
 	"replace": {
-		"typo3-zahnstocher": "self.version",
+		"typo3_zahnstocher": "self.version",
 		"typo3-ter/zahnstocher": "self.version"
 	}
 }
