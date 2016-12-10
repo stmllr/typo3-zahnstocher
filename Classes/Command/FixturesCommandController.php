@@ -39,16 +39,11 @@ class FixturesCommandController extends CommandController
             return;
         }
 
-        $table = 'be_users';
-        if (0 < $this->getDatabaseConnection()->exec_SELECTcountRows(
-            '*',
-            $table,
-            'username=' . $this->getDatabaseConnection()->fullQuoteStr($username, $table) . BackendUtility::deleteClause($table)
-            )
-        ) {
-            $this->outputLine('Username already exists.');
-        };
-        
+        if (true === $this->beUserExists($username)) {
+            $this->outputLine('Username already exists');
+            return;
+        }
+
         $userFields = [
             'username' => $username,
             'password' => $this->getHashedPassword($password),
@@ -76,6 +71,28 @@ class FixturesCommandController extends CommandController
     }
 
     /**
+     * Check if BE user exists
+     *
+     * @param $username
+     * @return bool
+     */
+    protected function beUserExists($username)
+    {
+        $table = 'be_users';
+        if (0 < $this->getDatabaseConnection()->exec_SELECTcountRows(
+                '*',
+                $table,
+                'username=' . $this->getDatabaseConnection()->fullQuoteStr($username,
+                    $table) . BackendUtility::deleteClause($table)
+            )
+        ) {
+            return true;
+        };
+
+        return false;
+    }
+
+    /**
      * Get database instance.
      * Will be initialized if it does not exist yet.
      *
@@ -85,5 +102,4 @@ class FixturesCommandController extends CommandController
     {
         return $GLOBALS['TYPO3_DB'];
     }
-
 }
