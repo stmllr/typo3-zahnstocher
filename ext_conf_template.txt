@@ -1,0 +1,5 @@
+  # cat=basic; type=string; label=Directory for fixture files: Supported are relative paths, absolute paths or file:/// streams
+fixturePath = typo3temp/fixtures/
+
+  # cat=basic; type=string; label=Name of the mailbox mbox file.
+mailboxFilename = testmail.mbox
