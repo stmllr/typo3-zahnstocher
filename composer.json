@@ -1,5 +1,5 @@
 {
-	"name": "stmllr/typo3-zahnstocher",
+	"name": "graseggergh/typo3-zahnstocher",
 	"type": "typo3-cms-extension",
 	"authors": [
 		{
@@ -24,7 +24,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Stmllr\\Zahnstocher\\": "Classes/"
+			"Graseggergh\\Zahnstocher\\": "Classes/"
 		}
 	},
 	"replace": {
